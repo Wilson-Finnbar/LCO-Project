@@ -24,4 +24,11 @@ V_s = unumpy.uarray([V['m_sim']],[V['m_sim_err']])
 B_z = B_s - B_i
 V_z = V_s - V_i
 
-print(f"B_z = {np.mean(B_z)} \nV_z = {np.mean(V_z)} ")
+# Taking the mean value for the zeropoint magnitude
+
+print(f"B_z = {np.mean(B_z)} \nV_z = {np.mean(V_z)} \n")
+
+# Creating a table of results of the calibration measurments
+
+print(B.to_latex(index=False, float_format="{:.2f}".format))
+print(V.to_latex(index=False, float_format="{:.2f}".format))

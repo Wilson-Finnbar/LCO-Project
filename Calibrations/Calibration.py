@@ -25,11 +25,3 @@ B_z = B_s - B_i
 V_z = V_s - V_i
 
 print(f"B_z = {np.mean(B_z)} \nV_z = {np.mean(V_z)} ")
-
-
-
-
-
-
-
-

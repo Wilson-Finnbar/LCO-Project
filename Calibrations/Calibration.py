@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from uncertainties import unumpy
+from uncertainties import unumpy as un
 
 # The two calibration files for each filter
 
@@ -11,13 +11,13 @@ V = pd.read_csv("Vcalib.csv")
 
 # Creating uncertianty arrays for the instrament magntiude
 
-B_i = unumpy.uarray([B['m_inst']],[B['m_inst_err']])
-V_i = unumpy.uarray([V['m_inst']],[V['m_inst_err']])
+B_i = un.uarray([B['m_inst']],[B['m_inst_err']])
+V_i = un.uarray([V['m_inst']],[V['m_inst_err']])
 
 # Doing the same as above for simbad magntiude
 
-B_s = unumpy.uarray([B['m_sim']],[B['m_sim_err']])
-V_s = unumpy.uarray([V['m_sim']],[V['m_sim_err']])
+B_s = un.uarray([B['m_sim']],[B['m_sim_err']])
+V_s = un.uarray([V['m_sim']],[V['m_sim_err']])
 
 # Subtracting the simbad magnitude form the instriment value to obtain the zero point magnitude
 

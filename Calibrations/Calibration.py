@@ -30,5 +30,5 @@ print(f"B_z = {np.mean(B_z)} \nV_z = {np.mean(V_z)} \n")
 
 # Creating a table of results of the calibration measurments
 
-print(B.to_latex(index=False, float_format="{:.2f}".format))
-print(V.to_latex(index=False, float_format="{:.2f}".format))
+print(B.to_latex(index=False, float_format="{:.3f}".format))
+print(V.to_latex(index=False, float_format="{:.3f}".format))

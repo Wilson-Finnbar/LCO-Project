@@ -96,11 +96,51 @@ Where $m$ is the magnitude (B or V). This produced a zero point magnitude of: B$
 
 \subsection{Automated detection}
 
-An object detection tool was used to quickly find the magnitudes of large number of stars in each image. 
-
+An object detection tool from \citet{gaia} was used to quickly identify the magnitudes of large number of stars in each image as well as their positions and information on how they selected those stars. These two large datasets were then uploaded into \citet{topcat} which matched the two filters by their positions so that the magnitudes recorded are for the same stars. This matched dataset can be found on the \citet{github}. The automated object detection tool found it hard to indentify singular stars in the dense core so other detection methods are needed to annalyse the centeral stars of the cluster. This tool was able to calulate the error in both magnitudes. this method records magntiude as apparent magnitude so to convert it into Absolute magntiude Equation \ref{eq:absolute} can be used.
+\begin{equation}
+	m-M = 5 \log \left( \frac{d}{10} \right)
+	\label{eq:absolute}
+\end{equation}
+Where $m$ is the apparent magntiude, $M$ is the absolute magntiude and $d$ is the distacne to NGC 3201.
 \subsection{Manual detection}
 
+An apature photometry tool was used to manually determine the magniude of stars foucsing especially around the core where the automated detections system found it harder to detect stars. Stars were chosen based on their shape, to ensure only that star was being recored instead of multiple, as well as theri brighness. This tool was able to calulate the error in the magnitude data for both filters.
+
 \section{Analysis}
+
+\subsection{Determing age of NGC 3201}
+
+The matched data from the automated detection method is shown in Figure \ref{fig:origin}. The matched dataset orignally recored 7612 stars but this number was reduced to 2411 stars by removing stars that lay outside of 0.152$^{\circ}$ from the center of the cluster as this is the radius of NGC3201 \citep{radius}. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{../Figures/errobar}
+	\caption{Colour magntiude diagram in the B and V filters from the matched dataset. The absulte magntiude in the V filter is shown on the y axis and the B magnitude minus V mangitude is shown on the x axis. Each data point has an error which is shown by the red error bars.}
+	\label{fig:origin}
+\end{figure}
+
+To determine th
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/manyiso}
+		\caption{h}
+		\label{fig:isomany}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/singiso}
+		\caption{h}
+		\label{fig:singiso}
+	\end{subfigure}
+	\caption{}
+	\label{fig:iso}
+\end{figure}
+
+\subsection{Spliting NGC 3201 into popultions based on distance from core}
 
 \section{Discussion}
 
